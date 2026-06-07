@@ -11,6 +11,22 @@
 5. [DESIGN_SPEC.md](DESIGN_SPEC.md)
 6. [HARNESS_SPEC.md](HARNESS_SPEC.md)
 
+各文書の役割:
+
+- [CODEX_RULES.md](CODEX_RULES.md): Codex が守る固定ルール
+- [PLAN.md](PLAN.md): プロジェクト全体の目的と基本方針
+- [ARCHITECTURE.md](ARCHITECTURE.md): 技術構成と責務分担
+- [GAME_SPEC.md](GAME_SPEC.md): ゲーム内容と挙動の仕様
+- [DESIGN_SPEC.md](DESIGN_SPEC.md): 見た目と演出の仕様
+- [HARNESS_SPEC.md](HARNESS_SPEC.md): 開発・検証コマンドのルール
+- [LIBRARY_VERSIONS.md](LIBRARY_VERSIONS.md): 採用バージョンの正本
+- [DOCKER_SETUP.md](DOCKER_SETUP.md): Docker 前提の開発環境ルール
+- [ROADMAP.md](ROADMAP.md): 機能を広げる順番
+- [WATERFALL_PLAN.md](WATERFALL_PLAN.md): ウォーターフォール工程の正本
+- [STATUS_BOARD.md](STATUS_BOARD.md): 現在地と次の作業の正本
+- [FIRST_MILESTONE.md](FIRST_MILESTONE.md): 最初の実装到達点
+- [RISK_NOTES.md](RISK_NOTES.md): 破綻しやすい点と注意事項
+
 基本ルール:
 
 - `CODEX_RULES.md` に従うこと
