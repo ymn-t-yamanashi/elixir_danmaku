@@ -29,6 +29,8 @@
 - `Erlang/OTP`: `28`
 - `Elixir`: `1.19.5`
 - `phx_new`: `1.8.7`
+- `Node.js`: `22.22.3`
+- `npm`: `10.9.8`
 
 ### Phoenix生成方針
 
@@ -43,6 +45,8 @@
 mix archive.install hex phx_new 1.8.7
 mix phx.new danmaku --app danmaku --module Danmaku --no-ecto
 ```
+
+詳細な依存バージョン一覧は [LIBRARY_VERSIONS.md](LIBRARY_VERSIONS.md) を参照する。
 
 ## 開発環境方針
 
