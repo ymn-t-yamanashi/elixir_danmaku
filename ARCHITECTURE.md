@@ -26,11 +26,7 @@
 
 ## バージョン方針
 
-- `Erlang/OTP`: `28`
-- `Elixir`: `1.19.5`
-- `phx_new`: `1.8.7`
-- `Node.js`: `22.22.3`
-- `npm`: `10.9.8`
+採用バージョンの正本は [LIBRARY_VERSIONS.md](LIBRARY_VERSIONS.md) とする。
 
 ### Phoenix生成方針
 
