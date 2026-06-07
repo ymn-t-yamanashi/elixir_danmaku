@@ -218,12 +218,10 @@ assets/
 - 重要ロジックを曖昧な `utils` に集める
 - 命名規則が途中でぶれる
 
-## 最初に作るとよい補助文書
+## 今後追加を検討する文書
 
-- `GAME_SPEC.md`
 - `RENDERING_DSL.md`
 - `PATTERNS.md`
-- `DOCKER_SETUP.md`
 
 ## 最初の実装ステップ
 
