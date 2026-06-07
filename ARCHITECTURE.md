@@ -24,6 +24,26 @@
 - フロントエンド描画: `Babylon.js`
 - データ保存: DBは使わない。ゲーム状態とスコアは実行中メモリで扱う
 
+## バージョン方針
+
+- `Erlang/OTP`: `28`
+- `Elixir`: `1.19.5`
+- `phx_new`: `1.8.7`
+
+### Phoenix生成方針
+
+- アプリ名: `danmaku`
+- OTPアプリ名: `danmaku`
+- ベースモジュール名: `Danmaku`
+- DBは使わないため、生成時は `--no-ecto` を使う
+
+生成コマンド:
+
+```bash
+mix archive.install hex phx_new 1.8.7
+mix phx.new danmaku --app danmaku --module Danmaku --no-ecto
+```
+
 ## 開発環境方針
 
 - 開発環境の正本は Docker とする
