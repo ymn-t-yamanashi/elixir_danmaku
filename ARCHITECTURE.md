@@ -1,5 +1,11 @@
 # Elixir Web弾幕シューティング構成書
 
+## プロジェクト名
+
+- プロジェクト名は `danmaku`
+- Phoenix アプリ名は `danmaku`
+- Elixir のトップレベルモジュール名は `Danmaku` を前提にする
+
 ## 全体方針
 
 ゲームの正しい状態は常に `Elixir` 側が持つ。
