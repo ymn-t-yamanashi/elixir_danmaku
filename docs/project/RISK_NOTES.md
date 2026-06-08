@@ -113,7 +113,7 @@
 
 ### 危険内容
 
-- Elixir, Phoenix, Babylon.js, Docker, Windows, WSL2 backend という要素が重なっている
+- Elixir, Phoenix, Babylon.js, Docker, Windows, Docker Desktop という要素が重なっている
 - 環境問題で止まると、ゲーム開発に入る前に消耗しやすい
 
 ### 破綻の兆候
