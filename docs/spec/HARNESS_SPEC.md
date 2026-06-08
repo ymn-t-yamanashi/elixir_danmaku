@@ -48,6 +48,7 @@ Docker 内での実行を前提に、再現性のある手順だけを扱う。
 
 - 実ブラウザで最小の画面確認を行う
 - Chromium を使ってホーム画面を開き、Tick が進むことと自機が移動できることを確認する
+- 実行ごとにスクリーンショットを `app/danmaku/.browser-check.png` に保存する
 - 実行は `MIX_ENV=dev mix browser.check` とする
 
 ### `mix credo`
@@ -120,6 +121,7 @@ end
 - `mix check` が aliases 経由で実行できる
 - `mix coveralls` が実行できる
 - `mix browser.check` が実行できる
+- `mix browser.check` がスクリーンショットを保存できる
 
 テストカバレッジの運用基準は次の通りとする。
 

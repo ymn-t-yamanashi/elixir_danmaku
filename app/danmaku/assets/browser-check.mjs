@@ -2,6 +2,8 @@ import { chromium } from "playwright-core";
 
 const url = process.env.BROWSER_CHECK_URL ?? "http://127.0.0.1:4000/";
 const executablePath = process.env.CHROMIUM_BIN ?? "/usr/bin/chromium";
+const screenshotPath =
+  process.env.BROWSER_CHECK_SCREENSHOT ?? new URL("../.browser-check.png", import.meta.url).pathname;
 
 const browser = await chromium.launch({
   executablePath,
@@ -9,8 +11,9 @@ const browser = await chromium.launch({
   args: ["--no-sandbox", "--disable-dev-shm-usage"],
 });
 
+let page;
 try {
-  const page = await browser.newPage();
+  page = await browser.newPage();
   page.on("console", message => {
     console.log(`browser console: ${message.type()}: ${message.text()}`);
   });
@@ -79,5 +82,9 @@ try {
 
   console.log("browser check passed");
 } finally {
+  if (page) {
+    await page.screenshot({ path: screenshotPath, fullPage: true });
+    console.log(`browser screenshot saved: ${screenshotPath}`);
+  }
   await browser.close();
 }

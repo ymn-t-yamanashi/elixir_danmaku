@@ -13,6 +13,7 @@ RUN apt-get update \
     gosu \
     inotify-tools \
     chromium \
+    fonts-noto-cjk \
     ca-certificates \
   && rm -rf /var/lib/apt/lists/*
 

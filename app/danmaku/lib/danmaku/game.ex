@@ -1,6 +1,6 @@
 defmodule Danmaku.Game do
   @moduledoc """
-  最小のゲーム状態更新を担当する。
+  最小のゲーム状態を更新するロジックをまとめる。
   """
 
   alias Danmaku.Game.Entity

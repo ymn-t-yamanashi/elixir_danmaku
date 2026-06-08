@@ -3,6 +3,7 @@ set -euo pipefail
 
 APP_DIR="${APP_DIR:-$PWD}"
 LOG_FILE="${TMPDIR:-/tmp}/danmaku-browser-check.log"
+SCREENSHOT_PATH="${BROWSER_CHECK_SCREENSHOT:-$APP_DIR/.browser-check.png}"
 
 (cd "$APP_DIR" && if [ ! -d deps ] || [ -z "$(find deps -mindepth 1 -maxdepth 1 -print -quit 2>/dev/null)" ]; then mix deps.get; fi)
 
@@ -32,4 +33,4 @@ for _ in {1..60}; do
 done
 
 echo "running browser script"
-node assets/browser-check.mjs
+BROWSER_CHECK_SCREENSHOT="$SCREENSHOT_PATH" node assets/browser-check.mjs
