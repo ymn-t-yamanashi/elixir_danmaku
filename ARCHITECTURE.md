@@ -51,7 +51,7 @@ mix phx.new danmaku --app danmaku --module Danmaku --no-ecto
 - 開発環境の正本は Docker とする
 - Windows では `Docker Desktop + WSL2 backend` を許容する
 - macOS / Linux でも同じ Docker 構成で動かせる形を目指す
-- `mix`, `node`, `phoenix` の実行環境はホストではなくコンテナ側に寄せる
+- `mix`, `node`, `npm`, `phoenix` の実行環境はホストではなくコンテナ側に寄せる
 - ブラウザ表示はホスト側で行い、アプリ本体はコンテナ内で動かす
 
 ### 初期コンテナ構成
@@ -77,12 +77,12 @@ mix phx.new danmaku --app danmaku --module Danmaku --no-ecto
 - スコア更新
 - ボスフェーズ進行
 - 弾幕パターン生成
-- クライアントへ送る状態または描画命令の生成
+- クライアントへ送るゲーム状態の生成
 
 ### Phoenix Channelsの責務
 
 - 入力イベント受信
-- ゲーム状態または描画命令の配信
+- ゲーム状態の配信
 - 必要な同期境界の管理
 
 ### クライアントの責務
@@ -121,17 +121,21 @@ Babylon.js全体をラップするのではなく、ゲームに必要な最小A
 
 ### 目的
 
-- Elixir主導で表示命令を組み立てやすくする
+- Elixir主導でゲーム状態を組み立てやすくする
 - Babylon.js依存を薄い層に閉じ込める
 - 後から必要な抽象だけ追加できるようにする
 
 ### 方式
 
-- Elixir側で描画命令または描画状態を作る
-- Channel経由でクライアントへ送る
-- クライアント側の薄い変換層がBabylon.js APIへ反映する
+- 初期段階の正本は `状態同期` とする
+- Elixir側で正しいゲーム状態を作る
+- Channel経由でクライアントへゲーム状態を送る
+- クライアント側の薄い変換層が、受け取った状態を Babylon.js API へ反映する
+- `描画命令同期` は初期の正本にせず、必要になった場合のみ限定用途で検討する
 
 ### 最小ラッパAPI案
+
+ここでいうラッパAPIは、Elixir から直接 Babylon.js を呼ぶものではなく、Elixir 側の状態をクライアント側で Babylon.js へ写すための薄い変換層の責務を表す。
 
 - `create_scene/1`
 - `set_camera/1`
@@ -143,11 +147,18 @@ Babylon.js全体をラップするのではなく、ゲームに必要な最小A
 ### データ例
 
 ```elixir
-[
-  {:spawn_entity, :player, %{kind: :ship, x: 0, y: 0, style: :player}},
-  {:update_entity, :player, %{x: 120, y: 340}},
-  {:play_effect, :boss_entry, %{x: 160, y: 80}}
-]
+%{
+  player: %{kind: :ship, x: 120, y: 340, style: :player},
+  enemies: [
+    %{id: :enemy_1, kind: :enemy, x: 160, y: 80, style: :boss}
+  ],
+  bullets: [
+    %{id: :bullet_1, kind: :bullet, x: 160, y: 120, style: :pink}
+  ],
+  effects: [
+    %{kind: :boss_entry, x: 160, y: 80}
+  ]
+}
 ```
 
 ### 最初はラップしないもの
@@ -193,19 +204,19 @@ assets/
 
 ### Elixir側の責務分割案
 
-- `Game.Engine`: ゲームループ全体
-- `Game.State`: ゲーム状態定義
-- `Game.Entities.Player`: 自機ロジック
-- `Game.Entities.Enemy`: 敵ロジック
-- `Game.Entities.Bullet`: 弾ロジック
-- `Game.Patterns`: 弾幕パターン生成
-- `Game.Rendering.Commands`: 描画命令生成
-- `Game.Net`: クライアント送信用整形
+- `Danmaku.Game.Engine`: ゲームループ全体
+- `Danmaku.Game.State`: ゲーム状態定義
+- `Danmaku.Game.Entities.Player`: 自機ロジック
+- `Danmaku.Game.Entities.Enemy`: 敵ロジック
+- `Danmaku.Game.Entities.Bullet`: 弾ロジック
+- `Danmaku.Game.Patterns`: 弾幕パターン生成
+- `Danmaku.Game.Rendering.StateView`: クライアント送信用の状態整形
+- `Danmaku.Game.Net`: クライアント送信用整形
 
 ### JavaScript側の責務分割案
 
 - `bridge/channel.js`: Phoenix Channel接続
-- `bridge/commands.js`: Elixir由来コマンドの解釈
+- `bridge/state.js`: Elixir由来ゲーム状態の解釈
 - `scene/createScene.js`: Babylon.jsシーン初期化
 - `entities/player.js`: 自機表示更新
 - `entities/enemy.js`: 敵表示更新
@@ -230,10 +241,11 @@ assets/
 1. `Phoenix` アプリ上で `Babylon.js` シーンを表示する
 2. 固定カメラと簡単な背景を置く
 3. 自機メッシュを1つ表示する
-4. Elixir側で `spawn_entity` と `update_entity` 相当の最小命令を作る
-5. クライアント側でその命令をBabylon.jsへ反映する
+4. 入力送信と Elixir 側の位置更新をつなぎ、自機移動の反映速度を確認する
+5. クライアント側で受け取ったゲーム状態を Babylon.js へ反映する
 6. 敵1体を表示し、次に弾を追加する
-7. HUDとエフェクトを順次追加する
+7. 自機と弾の視認性、回避しやすさ、更新の滑らかさを確認する
+8. HUDとエフェクトを順次追加する
 
 ## 実装上の注意
 
