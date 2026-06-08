@@ -20,6 +20,7 @@
 - ユーザーが単に `レビューして` と依頼した場合も、この文書の運用を標準とする
 - レビュー結果は必ず `4 人の会話形式` で提示する
 - 最後は `整理レビュー担当` が会話内容を要約して結論をまとめる
+- デザインと音楽の観点は、必要に応じて補助レビュー担当として追加する
 
 ## 役割分担
 
@@ -30,6 +31,11 @@
 - `Codexレビュー担当` = `codex-reviewer`
 - `整理レビュー担当` = `doc-reviewer`
 - `技術秘書` = 主担当エージェントが兼務する
+
+### 補助レビュー担当
+
+- `デザイナー担当` = `designer-reviewer`
+- `音楽担当` = `music-reviewer`
 
 ### 1. 技術レビュー担当
 
@@ -48,6 +54,8 @@
 - [GAME_SPEC.md](../spec/GAME_SPEC.md)
 - [DESIGN_SPEC.md](../spec/DESIGN_SPEC.md)
 - [GAME_REVIEW_PROFILE.md](GAME_REVIEW_PROFILE.md)
+- 必要に応じて [DESIGNER_PROFILE.md](DESIGNER_PROFILE.md) も読む
+- 必要に応じて [MUSIC_PROFILE.md](MUSIC_PROFILE.md) も読む
 
 ### 3. 整理レビュー担当
 
@@ -61,6 +69,8 @@
 - [RISK_NOTES.md](../project/RISK_NOTES.md)
 - [DOC_REVIEW_PROFILE.md](DOC_REVIEW_PROFILE.md)
 - [ELIXIR_CREATOR_PROFILE.md](ELIXIR_CREATOR_PROFILE.md)
+- 必要に応じて [DESIGNER_PROFILE.md](DESIGNER_PROFILE.md) も読む
+- 必要に応じて [MUSIC_PROFILE.md](MUSIC_PROFILE.md) も読む
 - 必要に応じて、変更対象の正本文書も読む
 
 ### 4. Codexレビュー担当
@@ -72,6 +82,8 @@
 - [REVIEW_SYSTEM.md](REVIEW_SYSTEM.md)
 - [CODEX_REVIEW_PROFILE.md](CODEX_REVIEW_PROFILE.md)
 - [ELIXIR_CREATOR_PROFILE.md](ELIXIR_CREATOR_PROFILE.md)
+- 必要に応じて [DESIGNER_PROFILE.md](DESIGNER_PROFILE.md) も読む
+- 必要に応じて [MUSIC_PROFILE.md](MUSIC_PROFILE.md) も読む
 - 必要に応じて、変更対象の正本文書も読む
 
 ## 主担当エージェントの役割
@@ -123,6 +135,12 @@
 
 - ゲームレビュー担当へ
   この変更をゲーム体験、視認性、遊びやすさ、理不尽さの観点でレビューしてください。
+
+- デザイナー担当へ
+  この変更を見た目、視認性、キャラクター性、情報整理の観点でレビューしてください。
+
+- 音楽担当へ
+  この変更をメロディ、フック、推進力、音色、リズムの観点でレビューしてください。
 
 - 整理レビュー担当へ
   この変更を文書整合性、工程整合、現在地管理、タスク分割の観点でレビューしてください。
