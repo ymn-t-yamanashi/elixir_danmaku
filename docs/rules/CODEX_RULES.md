@@ -102,8 +102,11 @@ Codex は [HARNESS_SPEC.md](../spec/HARNESS_SPEC.md) に従う。
 - `mix test`
 - `mix credo`
 - `mix check`
+- `mix coveralls`
 
 コード変更後に最初に優先する総合確認コマンドは `mix check` とする。
+テストカバレッジは `mix coveralls` で確認し、`95%` 以上を維持する。
+可能であれば `100%` を目標にする。
 
 ## デザイン実装ルール
 
