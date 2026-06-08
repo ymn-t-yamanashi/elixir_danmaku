@@ -51,6 +51,8 @@ FROM elixir:1.19.5-otp-28
 
 Phoenix アプリ生成は次を前提にする。
 
+以下の生成コマンドは Docker コンテナ内で実行する。
+
 ```bash
 mix archive.install hex phx_new 1.8.7
 mix phx.new danmaku --app danmaku --module Danmaku --no-ecto

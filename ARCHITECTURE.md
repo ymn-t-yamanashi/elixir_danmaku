@@ -37,6 +37,8 @@
 
 生成コマンド:
 
+以下の生成コマンドは Docker コンテナ内で実行する。
+
 ```bash
 mix archive.install hex phx_new 1.8.7
 mix phx.new danmaku --app danmaku --module Danmaku --no-ecto
