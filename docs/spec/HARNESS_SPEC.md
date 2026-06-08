@@ -47,7 +47,7 @@ Docker 内での実行を前提に、再現性のある手順だけを扱う。
 ### `mix browser.check`
 
 - 実ブラウザで最小の画面確認を行う
-- Chromium を使ってホーム画面を開き、Tick が進むことを確認する
+- Chromium を使ってホーム画面を開き、Tick が進むことと自機が移動できることを確認する
 - 実行は `MIX_ENV=dev mix browser.check` とする
 
 ### `mix credo`

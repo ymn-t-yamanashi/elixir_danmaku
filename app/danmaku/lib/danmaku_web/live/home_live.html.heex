@@ -1,6 +1,9 @@
 <Layouts.flash_group flash={@flash} />
 
-<main class="min-h-screen bg-[radial-gradient(circle_at_top,_#1f2a44_0,_#0b1020_45%,_#050814_100%)] text-slate-100">
+<main
+  class="min-h-screen bg-[radial-gradient(circle_at_top,_#1f2a44_0,_#0b1020_45%,_#050814_100%)] text-slate-100"
+  phx-window-keydown="move"
+>
   <section class="mx-auto flex min-h-screen max-w-7xl flex-col gap-8 px-4 py-6 sm:px-6 lg:px-8">
     <header class="flex flex-col gap-3 border-b border-white/10 pb-4 sm:flex-row sm:items-end sm:justify-between">
       <div>
@@ -61,7 +64,12 @@
               <div class="flex items-end justify-between text-sm text-slate-200">
                 <div>
                   <p class="text-xs uppercase tracking-[0.35em] text-slate-400">Player</p>
-                  <p class="mt-1 font-semibold">
+                  <p
+                    class="mt-1 font-semibold"
+                    data-testid="player-position"
+                    data-player-x={@game.player.x}
+                    data-player-y={@game.player.y}
+                  >
                     x {@game.player.x |> Float.round(1)} / y {@game.player.y |> Float.round(1)}
                   </p>
                 </div>

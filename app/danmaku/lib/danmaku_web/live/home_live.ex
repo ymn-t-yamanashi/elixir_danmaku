@@ -4,6 +4,20 @@ defmodule DanmakuWeb.HomeLive do
   alias Danmaku.Game
 
   @tick_interval_ms 200
+  @movement_keys %{
+    "ArrowUp" => %{move: %{x: 0.0, y: -1.0}},
+    "ArrowDown" => %{move: %{x: 0.0, y: 1.0}},
+    "ArrowLeft" => %{move: %{x: -1.0, y: 0.0}},
+    "ArrowRight" => %{move: %{x: 1.0, y: 0.0}},
+    "w" => %{move: %{x: 0.0, y: -1.0}},
+    "s" => %{move: %{x: 0.0, y: 1.0}},
+    "a" => %{move: %{x: -1.0, y: 0.0}},
+    "d" => %{move: %{x: 1.0, y: 0.0}},
+    "W" => %{move: %{x: 0.0, y: -1.0}},
+    "S" => %{move: %{x: 0.0, y: 1.0}},
+    "A" => %{move: %{x: -1.0, y: 0.0}},
+    "D" => %{move: %{x: 1.0, y: 0.0}}
+  }
 
   @impl true
   def mount(_params, _session, socket) do
@@ -23,6 +37,24 @@ defmodule DanmakuWeb.HomeLive do
   end
 
   @impl true
+  def handle_event("move", %{"key" => key}, socket) do
+    input = key_to_input(key)
+
+    if input == %{move: %{x: 0.0, y: 0.0}} do
+      {:noreply, socket}
+    else
+      state = Game.move(socket.assigns.state, input)
+
+      socket =
+        socket
+        |> assign(:state, state)
+        |> assign(:game, Game.snapshot(state))
+
+      {:noreply, socket}
+    end
+  end
+
+  @impl true
   def handle_info(:tick, socket) do
     state = Game.step(socket.assigns.state, %{})
 
@@ -38,5 +70,9 @@ defmodule DanmakuWeb.HomeLive do
   defp schedule_tick(socket) do
     Process.send_after(self(), :tick, socket.assigns.tick_interval_ms)
     socket
+  end
+
+  defp key_to_input(key) do
+    Map.get(@movement_keys, key, %{move: %{x: 0.0, y: 0.0}})
   end
 end

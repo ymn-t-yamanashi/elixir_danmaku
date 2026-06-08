@@ -21,6 +21,10 @@ defmodule Danmaku.Game do
     |> increment_tick()
   end
 
+  def move(%State{} = state, input \\ %{}) do
+    move_player(state, input)
+  end
+
   def snapshot(%State{} = state) do
     %{
       tick: state.tick,

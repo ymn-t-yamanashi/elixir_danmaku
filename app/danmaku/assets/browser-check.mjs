@@ -32,6 +32,9 @@ try {
   const initialTick = Number(
     await page.locator('[data-testid="game-tick"]').getAttribute("data-game-tick"),
   );
+  const initialPlayerX = Number(
+    await page.locator('[data-testid="player-position"]').getAttribute("data-player-x"),
+  );
 
   await page.waitForFunction(
     previousTick => {
@@ -45,12 +48,33 @@ try {
     { timeout: 15_000 },
   );
 
+  await page.keyboard.press("ArrowLeft");
+
+  await page.waitForFunction(
+    previousX => {
+      const element = document.querySelector('[data-testid="player-position"]');
+      if (!element) return false;
+
+      const currentX = Number(element.getAttribute("data-player-x"));
+      return Number.isFinite(currentX) && currentX < previousX;
+    },
+    initialPlayerX,
+    { timeout: 15_000 },
+  );
+
   const finalTick = Number(
     await page.locator('[data-testid="game-tick"]').getAttribute("data-game-tick"),
+  );
+  const finalPlayerX = Number(
+    await page.locator('[data-testid="player-position"]').getAttribute("data-player-x"),
   );
 
   if (!Number.isFinite(finalTick) || finalTick <= initialTick) {
     throw new Error(`tick did not advance: initial=${initialTick}, final=${finalTick}`);
+  }
+
+  if (!Number.isFinite(finalPlayerX) || finalPlayerX >= initialPlayerX) {
+    throw new Error(`player did not move left: initial=${initialPlayerX}, final=${finalPlayerX}`);
   }
 
   console.log("browser check passed");
