@@ -34,12 +34,14 @@ Docker 内での実行を前提に、再現性のある手順だけを扱う。
 ### `mix test`
 
 - テスト実行を行う
+- 実行時は `MIX_ENV=test` を使う
 
 ### `mix coveralls`
 
 - テストカバレッジを測定する
 - 既定の合格基準は `95%` 以上とする
 - 可能であれば `100%` を維持する
+- 実行時は `MIX_ENV=test` を使う
 
 ### `mix credo`
 
@@ -82,6 +84,7 @@ end
 - コンパイルだけ確認したいときは `mix compile`
 - テストだけ確認したいときは `mix test`
 - カバレッジを確認したいときは `mix coveralls`
+- `mix test` と `mix coveralls` は `MIX_ENV=test` で実行する
 - コーディングルールだけ確認したいときは `mix credo`
 
 ## Docker前提

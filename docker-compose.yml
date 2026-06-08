@@ -14,7 +14,7 @@ services:
     ports:
       - "4000:4000"
     environment:
-      MIX_ENV: dev
+      MIX_ENV: ${MIX_ENV:-dev}
       PHX_SERVER: "true"
       HOME: /home/app
     command: ["bash"]
