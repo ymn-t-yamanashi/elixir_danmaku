@@ -87,9 +87,9 @@ defmodule DanmakuWeb do
       # Core UI components
       import DanmakuWeb.CoreComponents
 
+      alias DanmakuWeb.Layouts
       # Common modules used in templates
       alias Phoenix.LiveView.JS
-      alias DanmakuWeb.Layouts
 
       # Routes generation with the ~p sigil
       unquote(verified_routes())
