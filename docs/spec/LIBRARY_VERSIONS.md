@@ -1,6 +1,11 @@
-# ライブラリ採用バージョン
+﻿# ライブラリ採用バージョン
 
 ## 目的
+
+この文書は、`danmaku` で採用するツールチェーンと主要ライブラリのバージョンを固定する。
+Docker 前提の開発で使うことを前提にする。
+
+## 本文
 
 この文書は、`danmaku` で採用するツールチェーンと主要ライブラリのバージョンを固定するための一覧である。
 Docker 前提の開発環境で使うことを前提にする。
@@ -9,7 +14,7 @@ Docker 前提の開発環境で使うことを前提にする。
 
 - [ARCHITECTURE.md](ARCHITECTURE.md)
 - [DOCKER_SETUP.md](DOCKER_SETUP.md)
-- [CODEX_RULES.md](CODEX_RULES.md)
+- [CODEX_RULES.md](../rules/CODEX_RULES.md)
 
 ## ツールチェーン
 

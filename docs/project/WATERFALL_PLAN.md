@@ -1,6 +1,11 @@
-# danmaku ウォーターフォール工程表
+﻿# danmaku ウォーターフォール工程表
 
 ## 目的
+
+この文書は、`danmaku` のウォーターフォール工程を定める。
+各工程で何を確認し、どこで次へ進めるかを明確にする。
+
+## 本文
 
 この文書は、`danmaku` を一般的なウォーターフォール工程で進めるための工程表である。
 工程を大きく区切り、各工程の中にこのプロジェクト固有の詳細作業を整理する。
@@ -8,9 +13,9 @@
 関連文書:
 
 - [PLAN.md](PLAN.md)
-- [ARCHITECTURE.md](ARCHITECTURE.md)
-- [GAME_SPEC.md](GAME_SPEC.md)
-- [DESIGN_SPEC.md](DESIGN_SPEC.md)
+- [ARCHITECTURE.md](../spec/ARCHITECTURE.md)
+- [GAME_SPEC.md](../spec/GAME_SPEC.md)
+- [DESIGN_SPEC.md](../spec/DESIGN_SPEC.md)
 - [FIRST_MILESTONE.md](FIRST_MILESTONE.md)
 - [STATUS_BOARD.md](STATUS_BOARD.md)
 
@@ -51,8 +56,8 @@
 ### 主な成果物
 
 - [PLAN.md](PLAN.md)
-- [GAME_SPEC.md](GAME_SPEC.md)
-- [DESIGN_SPEC.md](DESIGN_SPEC.md)
+- [GAME_SPEC.md](../spec/GAME_SPEC.md)
+- [DESIGN_SPEC.md](../spec/DESIGN_SPEC.md)
 
 ### 完了条件
 
@@ -72,14 +77,14 @@
 - Docker を開発環境の正本にする
 - ホスト環境でのビルドと実行を禁止する
 - `Elixir + Phoenix + Babylon.js` の役割分担を定義する
-- 採用バージョンは [LIBRARY_VERSIONS.md](LIBRARY_VERSIONS.md) を正本として固定する
+- 採用バージョンは [LIBRARY_VERSIONS.md](../spec/LIBRARY_VERSIONS.md) を正本として固定する
 - DBなし前提で `--no-ecto` を採用する
 
 ### 主な成果物
 
-- [ARCHITECTURE.md](ARCHITECTURE.md)
-- [DOCKER_SETUP.md](DOCKER_SETUP.md)
-- [LIBRARY_VERSIONS.md](LIBRARY_VERSIONS.md)
+- [ARCHITECTURE.md](../spec/ARCHITECTURE.md)
+- [DOCKER_SETUP.md](../spec/DOCKER_SETUP.md)
+- [LIBRARY_VERSIONS.md](../spec/LIBRARY_VERSIONS.md)
 
 ### 完了条件
 
@@ -107,9 +112,9 @@
 - [FIRST_MILESTONE.md](FIRST_MILESTONE.md)
 - [ROADMAP.md](ROADMAP.md)
 - [STATUS_BOARD.md](STATUS_BOARD.md)
-- [HARNESS_SPEC.md](HARNESS_SPEC.md)
+- [HARNESS_SPEC.md](../spec/HARNESS_SPEC.md)
 - [RISK_NOTES.md](RISK_NOTES.md)
-- [CODEX_RULES.md](CODEX_RULES.md)
+- [CODEX_RULES.md](../rules/CODEX_RULES.md)
 - [AGENTS.md](AGENTS.md)
 
 ### 完了条件

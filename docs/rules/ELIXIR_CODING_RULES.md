@@ -1,6 +1,11 @@
-# Elixir コーディングルール
+﻿# Elixir コーディングルール
 
 ## 目的
+
+この文書は、`danmaku` で Elixir コードを書くときの基本ルールを定める。
+読みやすさ、保守性、Codex での扱いやすさを揃えるための正本である。
+
+## 本文
 
 この文書は、`danmaku` で Elixir コードを書くときの基本ルールを定義する。
 目的は、可読性、保守性、Codex による修正しやすさを揃えることにある。
@@ -8,8 +13,8 @@
 関連文書:
 
 - [CODEX_RULES.md](CODEX_RULES.md)
-- [HARNESS_SPEC.md](HARNESS_SPEC.md)
-- [ARCHITECTURE.md](ARCHITECTURE.md)
+- [HARNESS_SPEC.md](../spec/HARNESS_SPEC.md)
+- [ARCHITECTURE.md](../spec/ARCHITECTURE.md)
 
 ## 基本方針
 
@@ -127,4 +132,4 @@
 
 - 整形の正本: `mix format`
 - スタイル確認の正本: `mix credo --strict`
-- 開発コマンド運用の正本: [HARNESS_SPEC.md](HARNESS_SPEC.md)
+- 開発コマンド運用の正本: [HARNESS_SPEC.md](../spec/HARNESS_SPEC.md)

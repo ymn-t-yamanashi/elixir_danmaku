@@ -1,4 +1,4 @@
-# Codexガードレール
+﻿# Codexガードレール
 
 ## 目的
 
@@ -19,14 +19,16 @@
 
 Codex は次の順で文書を参照して判断する。
 
-1. [PLAN.md](PLAN.md)
-2. [ARCHITECTURE.md](ARCHITECTURE.md)
-3. [GAME_SPEC.md](GAME_SPEC.md)
-4. [DESIGN_SPEC.md](DESIGN_SPEC.md)
-5. [HARNESS_SPEC.md](HARNESS_SPEC.md)
+1. [PLAN.md](../project/PLAN.md)
+2. [ARCHITECTURE.md](../spec/ARCHITECTURE.md)
+3. [GAME_SPEC.md](../spec/GAME_SPEC.md)
+4. [DESIGN_SPEC.md](../spec/DESIGN_SPEC.md)
+5. [HARNESS_SPEC.md](../spec/HARNESS_SPEC.md)
 6. [ELIXIR_CODING_RULES.md](ELIXIR_CODING_RULES.md)
-7. [GAME_REVIEW_RULES.md](GAME_REVIEW_RULES.md)
-8. [REVIEW_SYSTEM.md](REVIEW_SYSTEM.md)
+7. [GAME_REVIEW_RULES.md](../review/GAME_REVIEW_RULES.md)
+8. [REVIEW_SYSTEM.md](../review/REVIEW_SYSTEM.md)
+
+詳細な索引は [docs/README.md](docs/README.md) を参照する。
 
 仕様が衝突した場合は、実装前に確認を取る。
 
@@ -74,8 +76,8 @@ Codex は次の順で文書を参照して判断する。
 - 1回の変更で目的を増やしすぎない
 - 必要がない限り新しい抽象化を増やさない
 - 仕様変更を伴う場合は仕様書も更新する
-- レビュー運用は [REVIEW_SYSTEM.md](REVIEW_SYSTEM.md) に従う
-- ユーザーが `レビューして` と依頼した場合は、原則として [REVIEW_SYSTEM.md](REVIEW_SYSTEM.md) に従ってレビューする
+- レビュー運用は [REVIEW_SYSTEM.md](../review/REVIEW_SYSTEM.md) に従う
+- ユーザーが `レビューして` と依頼した場合は、原則として [REVIEW_SYSTEM.md](../review/REVIEW_SYSTEM.md) に従ってレビューする
 - レビュー結果は必ず 4 人の会話形式で示し、最後に整理レビュー担当が要約する
 
 ## Codexが避けること
@@ -90,7 +92,7 @@ Codex は次の順で文書を参照して判断する。
 
 ## ハーネス運用ルール
 
-Codex は [HARNESS_SPEC.md](HARNESS_SPEC.md) に従う。
+Codex は [HARNESS_SPEC.md](../spec/HARNESS_SPEC.md) に従う。
 
 変更後の確認コマンドは次に固定する。
 
@@ -104,12 +106,12 @@ Codex は [HARNESS_SPEC.md](HARNESS_SPEC.md) に従う。
 
 ## デザイン実装ルール
 
-- デザイン実装は [DESIGN_SPEC.md](DESIGN_SPEC.md) に忠実に行う
+- デザイン実装は [DESIGN_SPEC.md](../spec/DESIGN_SPEC.md) に忠実に行う
 - 視認性を最優先する
 - 背景より弾と自機の可読性を優先する
 - UI をモダンWebアプリ風に単純化しない
 - 東方風の幻想性と密度感を保つ
-- ゲーム体験や見た目のレビュー時は [GAME_REVIEW_RULES.md](GAME_REVIEW_RULES.md) も参照する
+- ゲーム体験や見た目のレビュー時は [GAME_REVIEW_RULES.md](../review/GAME_REVIEW_RULES.md) も参照する
 
 ## 仕様更新ルール
 
@@ -122,6 +124,13 @@ Codex は [HARNESS_SPEC.md](HARNESS_SPEC.md) に従う。
 Codex は変更対象に応じて、対応する文書を更新する。
 Codex は文書を更新したとき、関連する他の文書との整合性と重複を確認する。
 整合性が崩れる場合は、必要な文書もあわせて更新する。
+
+## 文書言語ルール
+
+- Markdown 文書は原則として日本語で記述する
+- ただし、コード、コマンド、ファイル名、識別子、外部仕様名は原文表記を優先する
+- 既存文書を更新するときは、同じ文書内で言語方針を混在させない
+- 例外が必要な場合は、その文書内で理由を明記する
 
 ## 実装前の判断ルール
 

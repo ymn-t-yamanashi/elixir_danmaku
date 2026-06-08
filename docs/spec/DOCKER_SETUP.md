@@ -1,15 +1,20 @@
-# Dockerセットアップ方針
+﻿# Dockerセットアップ方針
 
 ## 目的
+
+この文書は、`danmaku` を Docker 前提で開発するための環境ルールを定める。
+Windows, macOS, Linux のどれでも同じ手順で進められることを重視する。
+
+## 本文
 
 この文書は、このプロジェクトを Docker 前提で開発するための基本方針を定義する。
 Windows, macOS, Linux のいずれでも、できるだけ同じ手順で開発を始められる状態を目指す。
 
 関連文書:
 
-- [PLAN.md](PLAN.md)
+- [PLAN.md](../project/PLAN.md)
 - [ARCHITECTURE.md](ARCHITECTURE.md)
-- [CODEX_RULES.md](CODEX_RULES.md)
+- [CODEX_RULES.md](../rules/CODEX_RULES.md)
 
 ## 基本方針
 

@@ -1,6 +1,11 @@
-# プロジェクト危険ポイント整理
+﻿# プロジェクト危険ポイント整理
 
 ## 目的
+
+この文書は、`danmaku` で破綻しやすい点と注意事項を整理する。
+実装前にリスクを確認して、判断の迷いを減らすための正本である。
+
+## 本文
 
 この文書は、このプロジェクトが破綻しやすい点を事前に整理するためのメモである。
 目的は不安を増やすことではなく、危険箇所を早い段階で見える化し、進め方を安定させることにある。
@@ -8,10 +13,10 @@
 関連文書:
 
 - [PLAN.md](PLAN.md)
-- [ARCHITECTURE.md](ARCHITECTURE.md)
-- [GAME_SPEC.md](GAME_SPEC.md)
-- [DESIGN_SPEC.md](DESIGN_SPEC.md)
-- [CODEX_RULES.md](CODEX_RULES.md)
+- [ARCHITECTURE.md](../spec/ARCHITECTURE.md)
+- [GAME_SPEC.md](../spec/GAME_SPEC.md)
+- [DESIGN_SPEC.md](../spec/DESIGN_SPEC.md)
+- [CODEX_RULES.md](../rules/CODEX_RULES.md)
 
 ## 結論
 

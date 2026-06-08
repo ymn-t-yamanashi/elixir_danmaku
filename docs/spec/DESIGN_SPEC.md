@@ -1,6 +1,11 @@
-# Elixir Web弾幕シューティング デザイン仕様書
+﻿# Elixir Web弾幕シューティング デザイン仕様書
 
 ## 目的
+
+この文書は、`danmaku` の見た目と演出の方針を定める。
+ゲーム体験の印象、色、UI、3D 表現の見せ方をここで揃える。
+
+## 本文
 
 この文書は、現在の画面イメージに忠実なビジュアル仕様を定義する。
 ゲーム性は2Dだが、見た目は幻想的で奥行きのある `2.5D` 弾幕シューティングとして表現する。
@@ -11,7 +16,7 @@
 
 関連文書:
 
-- [PLAN.md](PLAN.md)
+- [PLAN.md](../project/PLAN.md)
 - [ARCHITECTURE.md](ARCHITECTURE.md)
 - [GAME_SPEC.md](GAME_SPEC.md)
 

@@ -1,0 +1,10 @@
+﻿# 仕様文書
+
+技術構成とゲーム仕様に関する文書の索引。
+
+- [`ARCHITECTURE.md`](ARCHITECTURE.md)
+- [`GAME_SPEC.md`](GAME_SPEC.md)
+- [`DESIGN_SPEC.md`](DESIGN_SPEC.md)
+- [`HARNESS_SPEC.md`](HARNESS_SPEC.md)
+- [`LIBRARY_VERSIONS.md`](LIBRARY_VERSIONS.md)
+- [`DOCKER_SETUP.md`](DOCKER_SETUP.md)

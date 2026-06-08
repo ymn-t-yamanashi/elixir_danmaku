@@ -1,43 +1,32 @@
-# プロジェクト指示
+﻿# プロジェクト指示
 
 プロジェクト名は `danmaku` とする。
 
 変更を行う前に、次のファイルをこの順番で読むこと。
 
-1. [CODEX_RULES.md](CODEX_RULES.md)
-2. [PLAN.md](PLAN.md)
-3. [ARCHITECTURE.md](ARCHITECTURE.md)
-4. [LIBRARY_VERSIONS.md](LIBRARY_VERSIONS.md)
-5. [DOCKER_SETUP.md](DOCKER_SETUP.md)
-6. [GAME_SPEC.md](GAME_SPEC.md)
-7. [DESIGN_SPEC.md](DESIGN_SPEC.md)
-8. [HARNESS_SPEC.md](HARNESS_SPEC.md)
-9. [ELIXIR_CODING_RULES.md](ELIXIR_CODING_RULES.md)
-10. [ELIXIR_CREATOR_NOTES.md](ELIXIR_CREATOR_NOTES.md)
-11. [GAME_REVIEW_RULES.md](GAME_REVIEW_RULES.md)
-12. [TECH_SECRETARY_PROFILE.md](TECH_SECRETARY_PROFILE.md)
-13. [REVIEW_SYSTEM.md](REVIEW_SYSTEM.md)
+1. [CODEX_RULES.md](docs/rules/CODEX_RULES.md)
+2. [PLAN.md](docs/project/PLAN.md)
+3. [ARCHITECTURE.md](docs/spec/ARCHITECTURE.md)
+4. [LIBRARY_VERSIONS.md](docs/spec/LIBRARY_VERSIONS.md)
+5. [DOCKER_SETUP.md](docs/spec/DOCKER_SETUP.md)
+6. [GAME_SPEC.md](docs/spec/GAME_SPEC.md)
+7. [DESIGN_SPEC.md](docs/spec/DESIGN_SPEC.md)
+8. [HARNESS_SPEC.md](docs/spec/HARNESS_SPEC.md)
+9. [ELIXIR_CODING_RULES.md](docs/rules/ELIXIR_CODING_RULES.md)
+10. [ELIXIR_CREATOR_NOTES.md](docs/rules/ELIXIR_CREATOR_NOTES.md)
+11. [GAME_REVIEW_RULES.md](docs/review/GAME_REVIEW_RULES.md)
+12. [TECH_SECRETARY_PROFILE.md](docs/rules/TECH_SECRETARY_PROFILE.md)
+13. [REVIEW_SYSTEM.md](docs/review/REVIEW_SYSTEM.md)
 
-各文書の役割:
+整理された文書一覧は [docs/README.md](docs/README.md) を参照する。
 
-- [CODEX_RULES.md](CODEX_RULES.md): Codex が守る固定ルール
-- [PLAN.md](PLAN.md): プロジェクト全体の目的と基本方針
-- [ARCHITECTURE.md](ARCHITECTURE.md): 技術構成と責務分担
-- [GAME_SPEC.md](GAME_SPEC.md): ゲーム内容と挙動の仕様
-- [DESIGN_SPEC.md](DESIGN_SPEC.md): 見た目と演出の仕様
-- [HARNESS_SPEC.md](HARNESS_SPEC.md): 開発・検証コマンドのルール
-- [ELIXIR_CODING_RULES.md](ELIXIR_CODING_RULES.md): Elixir の書き方ルール
-- [ELIXIR_CREATOR_NOTES.md](ELIXIR_CREATOR_NOTES.md): Elixir の作成者と設計思想の整理
-- [GAME_REVIEW_RULES.md](GAME_REVIEW_RULES.md): ゲーム体験レビューの観点
-- [TECH_SECRETARY_PROFILE.md](TECH_SECRETARY_PROFILE.md): 技術が分かる右腕の人物像
-- [REVIEW_SYSTEM.md](REVIEW_SYSTEM.md): レビュー体制とサブエージェント運用の正本
-- [LIBRARY_VERSIONS.md](LIBRARY_VERSIONS.md): 採用バージョンの正本
-- [DOCKER_SETUP.md](DOCKER_SETUP.md): Docker 前提の開発環境ルール
-- [ROADMAP.md](ROADMAP.md): 機能を広げる順番
-- [WATERFALL_PLAN.md](WATERFALL_PLAN.md): ウォーターフォール工程の正本
-- [STATUS_BOARD.md](STATUS_BOARD.md): 現在地と次の作業の正本
-- [FIRST_MILESTONE.md](FIRST_MILESTONE.md): 最初の実装到達点
-- [RISK_NOTES.md](RISK_NOTES.md): 破綻しやすい点と注意事項
+主要文書の役割:
+
+- `CODEX_RULES.md`: Codex が守る固定ルール
+- `STATUS_BOARD.md`: 現在地と次の作業の正本
+- `REVIEW_SYSTEM.md`: レビュー体制とサブエージェント運用の正本
+- `HARNESS_SPEC.md`: 開発・検証コマンドのルール
+- `PLAN.md`: プロジェクト全体の目的と基本方針
 
 基本ルール:
 

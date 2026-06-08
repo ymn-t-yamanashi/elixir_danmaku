@@ -1,13 +1,18 @@
-# Elixir Web弾幕シューティング仕様書
+﻿# Elixir Web弾幕シューティング仕様書
 
 ## 目的
+
+この文書は、`danmaku` のゲーム内容と挙動を定義する。
+ゲームロジックは Elixir 側で扱い、表示は 2.5D の Babylon.js 描画で表現する。
+
+## 本文
 
 この仕様書は、Elixir主導で開発するWeb弾幕シューティングのゲーム仕様を定義する。
 ゲーム性は2D、見た目は3D表示の `2.5D` とし、東方Project風の読みやすく美しい弾幕戦を目指す。
 
 関連文書:
 
-- [PLAN.md](PLAN.md)
+- [PLAN.md](../project/PLAN.md)
 - [ARCHITECTURE.md](ARCHITECTURE.md)
 
 ## ゲーム概要

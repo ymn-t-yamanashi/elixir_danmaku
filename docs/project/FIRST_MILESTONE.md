@@ -1,6 +1,11 @@
-# 最初のマイルストーン
+﻿# 最初のマイルストーン
 
 ## 目的
+
+この文書は、`danmaku` が最初に到達すべき実装到達点を示す。
+初期実装の範囲を明確にして、着手判断を揃える。
+
+## 本文
 
 この文書は、`danmaku` の最初の実装単位を明確にするための文書である。
 最終目標は弾幕シューティングだが、最初のマイルストーンではそこまで求めない。
@@ -9,9 +14,9 @@
 関連文書:
 
 - [PLAN.md](PLAN.md)
-- [ARCHITECTURE.md](ARCHITECTURE.md)
-- [GAME_SPEC.md](GAME_SPEC.md)
-- [DESIGN_SPEC.md](DESIGN_SPEC.md)
+- [ARCHITECTURE.md](../spec/ARCHITECTURE.md)
+- [GAME_SPEC.md](../spec/GAME_SPEC.md)
+- [DESIGN_SPEC.md](../spec/DESIGN_SPEC.md)
 - [RISK_NOTES.md](RISK_NOTES.md)
 
 ## この段階でやらないこと
