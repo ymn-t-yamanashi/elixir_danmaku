@@ -2,6 +2,7 @@
 docs
 scripts
 !scripts/docker-entrypoint.sh
+!scripts/browser_check.sh
 assets
 *.md
 *.log

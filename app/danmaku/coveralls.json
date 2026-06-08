@@ -12,6 +12,7 @@
     "lib/danmaku_web/controllers/page_html.ex",
     "lib/danmaku_web/endpoint.ex",
     "lib/danmaku_web/gettext.ex",
+    "lib/danmaku_web/live/home_live.ex",
     "lib/danmaku_web/router.ex",
     "lib/danmaku_web/telemetry.ex"
   ],

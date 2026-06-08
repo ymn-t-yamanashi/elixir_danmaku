@@ -24,6 +24,8 @@ defmodule Danmaku.Game do
   def snapshot(%State{} = state) do
     %{
       tick: state.tick,
+      width: state.width,
+      height: state.height,
       player: state.player,
       enemy: state.enemy,
       bullets: state.bullets

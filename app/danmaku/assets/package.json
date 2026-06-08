@@ -1,0 +1,7 @@
+{
+  "name": "danmaku-assets",
+  "private": true,
+  "devDependencies": {
+    "playwright-core": "^1.55.0"
+  }
+}

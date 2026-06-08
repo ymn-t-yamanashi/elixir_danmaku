@@ -79,6 +79,7 @@ Codex は次の順で文書を参照して判断する。
 - コミットメッセージは必ず日本語で書く
 - テストの `describe`、`test`、説明文は原則日本語で書く
 - テスト工程が完了したら、必ずレビューを行う
+- ブラウザ表示を伴う変更後は `mix browser.check` を行う
 - レビューで指摘が出た場合は、指摘をもとに修正する
 - レビュー運用は [REVIEW_SYSTEM.md](../review/REVIEW_SYSTEM.md) に従う
 - ユーザーが `レビューして` と依頼した場合は、原則として [REVIEW_SYSTEM.md](../review/REVIEW_SYSTEM.md) に従ってレビューする

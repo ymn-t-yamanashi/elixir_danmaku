@@ -9,6 +9,8 @@ defmodule Danmaku.GameTest do
       state = Game.new()
 
       assert state.tick == 0
+      assert state.width == 320.0
+      assert state.height == 640.0
       assert state.player.kind == :player
       assert state.enemy.kind == :enemy
       assert state.bullets == []
@@ -79,6 +81,8 @@ defmodule Danmaku.GameTest do
       snapshot = Game.snapshot(Game.new())
 
       assert snapshot.tick == 0
+      assert snapshot.width == 320.0
+      assert snapshot.height == 640.0
       assert snapshot.player.kind == :player
       assert snapshot.enemy.kind == :enemy
       assert snapshot.bullets == []

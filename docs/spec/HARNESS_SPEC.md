@@ -18,8 +18,9 @@ Docker 内での実行を前提に、再現性のある手順だけを扱う。
 - `mix credo`
 - `mix check`
 - `mix coveralls`
+- `mix browser.check`
 
-初期段階では、この 6 つ以外をハーネスに含めない。
+初期段階では、この 7 つ以外をハーネスに含めない。
 
 ## 役割
 
@@ -42,6 +43,12 @@ Docker 内での実行を前提に、再現性のある手順だけを扱う。
 - 既定の合格基準は `95%` 以上とする
 - 可能であれば `100%` を維持する
 - 実行時は `MIX_ENV=test` を使う
+
+### `mix browser.check`
+
+- 実ブラウザで最小の画面確認を行う
+- Chromium を使ってホーム画面を開き、Tick が進むことを確認する
+- 実行は `MIX_ENV=dev mix browser.check` とする
 
 ### `mix credo`
 
@@ -112,6 +119,7 @@ end
 - `mix credo --strict` が実行できる
 - `mix check` が aliases 経由で実行できる
 - `mix coveralls` が実行できる
+- `mix browser.check` が実行できる
 
 テストカバレッジの運用基準は次の通りとする。
 
@@ -120,5 +128,5 @@ end
 
 ## 結論
 
-このプロジェクトの Codex 向けハーネスは、`mix format`, `mix compile`, `mix test`, `mix credo`, `mix check`, `mix coveralls` の 6 つで構成する。
+このプロジェクトの Codex 向けハーネスは、`mix format`, `mix compile`, `mix test`, `mix credo`, `mix check`, `mix coveralls`, `mix browser.check` の 7 つで構成する。
 Codex はコード変更後、まず `mix check` を実行する。
