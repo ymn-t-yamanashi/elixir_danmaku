@@ -31,7 +31,7 @@
 
 ## レビュー
 
-- [GAME_REVIEW_RULES.md](review/GAME_REVIEW_RULES.md)
+- [GAME_REVIEW_PROFILE.md](review/GAME_REVIEW_PROFILE.md)
 - [ELIXIR_CREATOR_PROFILE.md](review/ELIXIR_CREATOR_PROFILE.md)
 - [REVIEW_SYSTEM.md](review/REVIEW_SYSTEM.md)
 - [review/README.md](review/README.md)

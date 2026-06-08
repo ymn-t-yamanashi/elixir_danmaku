@@ -47,7 +47,7 @@
 - 前提として主に読む文書は次とする
 - [GAME_SPEC.md](../spec/GAME_SPEC.md)
 - [DESIGN_SPEC.md](../spec/DESIGN_SPEC.md)
-- [GAME_REVIEW_RULES.md](GAME_REVIEW_RULES.md)
+- [GAME_REVIEW_PROFILE.md](GAME_REVIEW_PROFILE.md)
 
 ### 3. 整理レビュー担当
 

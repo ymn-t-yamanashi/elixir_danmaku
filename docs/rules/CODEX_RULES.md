@@ -25,7 +25,7 @@ Codex は次の順で文書を参照して判断する。
 4. [DESIGN_SPEC.md](../spec/DESIGN_SPEC.md)
 5. [HARNESS_SPEC.md](../spec/HARNESS_SPEC.md)
 6. [ELIXIR_CODING_RULES.md](ELIXIR_CODING_RULES.md)
-7. [GAME_REVIEW_RULES.md](../review/GAME_REVIEW_RULES.md)
+7. [GAME_REVIEW_PROFILE.md](../review/GAME_REVIEW_PROFILE.md)
 8. [REVIEW_SYSTEM.md](../review/REVIEW_SYSTEM.md)
 
 詳細な索引は [docs/README.md](docs/README.md) を参照する。
@@ -111,7 +111,7 @@ Codex は [HARNESS_SPEC.md](../spec/HARNESS_SPEC.md) に従う。
 - 背景より弾と自機の可読性を優先する
 - UI をモダンWebアプリ風に単純化しない
 - 東方風の幻想性と密度感を保つ
-- ゲーム体験や見た目のレビュー時は [GAME_REVIEW_RULES.md](../review/GAME_REVIEW_RULES.md) も参照する
+- ゲーム体験や見た目のレビュー時は [GAME_REVIEW_PROFILE.md](../review/GAME_REVIEW_PROFILE.md) も参照する
 
 ## 仕様更新ルール
 

@@ -14,7 +14,7 @@
 8. [HARNESS_SPEC.md](docs/spec/HARNESS_SPEC.md)
 9. [ELIXIR_CODING_RULES.md](docs/rules/ELIXIR_CODING_RULES.md)
 10. [ELIXIR_CREATOR_PROFILE.md](docs/review/ELIXIR_CREATOR_PROFILE.md)
-11. [GAME_REVIEW_RULES.md](docs/review/GAME_REVIEW_RULES.md)
+11. [GAME_REVIEW_PROFILE.md](docs/review/GAME_REVIEW_PROFILE.md)
 12. [REVIEW_SYSTEM.md](docs/review/REVIEW_SYSTEM.md)
 
 整理された文書一覧は [docs/README.md](docs/README.md) を参照する。

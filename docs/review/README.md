@@ -4,5 +4,5 @@
 レビュー資料のファイル名は、原則として `役割名_種別.md` でそろえる。
 
 - [`REVIEW_SYSTEM.md`](REVIEW_SYSTEM.md)
-- [`GAME_REVIEW_RULES.md`](GAME_REVIEW_RULES.md)
+- [`GAME_REVIEW_PROFILE.md`](GAME_REVIEW_PROFILE.md)
 - [`ELIXIR_CREATOR_PROFILE.md`](ELIXIR_CREATOR_PROFILE.md)
