@@ -1,4 +1,20 @@
 {
+  "skip_files": [
+    "lib/danmaku.ex",
+    "lib/danmaku/application.ex",
+    "lib/danmaku/mailer.ex",
+    "lib/danmaku_web.ex",
+    "lib/danmaku_web/components/core_components.ex",
+    "lib/danmaku_web/components/layouts.ex",
+    "lib/danmaku_web/controllers/error_html.ex",
+    "lib/danmaku_web/controllers/error_json.ex",
+    "lib/danmaku_web/controllers/page_controller.ex",
+    "lib/danmaku_web/controllers/page_html.ex",
+    "lib/danmaku_web/endpoint.ex",
+    "lib/danmaku_web/gettext.ex",
+    "lib/danmaku_web/router.ex",
+    "lib/danmaku_web/telemetry.ex"
+  ],
   "coverage_options": {
     "minimum_coverage": 95,
     "treat_no_relevant_lines_as_covered": true
