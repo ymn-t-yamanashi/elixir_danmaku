@@ -6,12 +6,13 @@ services:
         LOCAL_UID: ${LOCAL_UID:-1000}
         LOCAL_GID: ${LOCAL_GID:-1000}
     user: "${LOCAL_UID:-1000}:${LOCAL_GID:-1000}"
-    working_dir: /app
+    working_dir: /app/danmaku
     volumes:
-      - .:/app
+      - ./app:/app
     ports:
       - "4000:4000"
     environment:
       MIX_ENV: dev
       PHX_SERVER: "true"
+      HOME: /home/app
     command: ["bash"]

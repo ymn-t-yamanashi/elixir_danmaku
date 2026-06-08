@@ -5,3 +5,7 @@ assets
 *.md
 *.log
 *.tmp
+app/danmaku/.git
+app/danmaku/_build
+app/danmaku/deps
+app/danmaku/node_modules

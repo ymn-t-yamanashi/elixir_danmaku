@@ -23,8 +23,11 @@ COPY --from=node /usr/local/include/node /usr/local/include/node
 RUN groupadd -g "${LOCAL_GID}" app \
   && useradd -m -u "${LOCAL_UID}" -g "${LOCAL_GID}" app
 
-WORKDIR /app
-
 USER app
+
+RUN mix local.hex --force \
+  && mix local.rebar --force
+
+WORKDIR /app
 
 CMD ["bash"]
