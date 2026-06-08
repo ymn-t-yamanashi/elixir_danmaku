@@ -117,5 +117,5 @@ end
 
 ## 結論
 
-このプロジェクトの Codex 向けハーネスは、`mix format`, `mix compile`, `mix test`, `mix credo`, `mix check` の 5 つで構成する。
+このプロジェクトの Codex 向けハーネスは、`mix format`, `mix compile`, `mix test`, `mix credo`, `mix check`, `mix coveralls` の 6 つで構成する。
 Codex はコード変更後、まず `mix check` を実行する。
