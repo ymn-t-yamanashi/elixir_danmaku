@@ -51,6 +51,15 @@ try {
     { timeout: 15_000 },
   );
 
+  await page.waitForFunction(
+    () => {
+      const element = document.querySelector('[data-testid="bullet-count"]');
+      return element && Number(element.textContent) > 0;
+    },
+    null,
+    { timeout: 15_000 },
+  );
+
   await page.keyboard.press("ArrowLeft");
 
   await page.waitForFunction(
