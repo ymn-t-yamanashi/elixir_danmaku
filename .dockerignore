@@ -1,6 +1,7 @@
 .git
 docs
 scripts
+!scripts/docker-entrypoint.sh
 assets
 *.md
 *.log

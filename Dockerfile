@@ -10,6 +10,7 @@ RUN apt-get update \
     build-essential \
     curl \
     git \
+    gosu \
     inotify-tools \
     ca-certificates \
   && rm -rf /var/lib/apt/lists/*
@@ -30,4 +31,9 @@ RUN mix local.hex --force \
 
 WORKDIR /app
 
+COPY --chmod=755 scripts/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+
+USER root
+
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 CMD ["bash"]

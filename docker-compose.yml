@@ -5,10 +5,12 @@ services:
       args:
         LOCAL_UID: ${LOCAL_UID:-1000}
         LOCAL_GID: ${LOCAL_GID:-1000}
-    user: "${LOCAL_UID:-1000}:${LOCAL_GID:-1000}"
     working_dir: /app/danmaku
     volumes:
       - ./app:/app
+      - danmaku_deps:/app/danmaku/deps
+      - danmaku_build:/app/danmaku/_build
+      - danmaku_node_modules:/app/danmaku/assets/node_modules
     ports:
       - "4000:4000"
     environment:
@@ -16,3 +18,8 @@ services:
       PHX_SERVER: "true"
       HOME: /home/app
     command: ["bash"]
+
+volumes:
+  danmaku_deps:
+  danmaku_build:
+  danmaku_node_modules:
