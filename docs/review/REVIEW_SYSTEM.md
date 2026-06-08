@@ -38,7 +38,7 @@
 - [ARCHITECTURE.md](../spec/ARCHITECTURE.md)
 - [HARNESS_SPEC.md](../spec/HARNESS_SPEC.md)
 - [ELIXIR_CODING_RULES.md](../rules/ELIXIR_CODING_RULES.md)
-- [ELIXIR_CREATOR_NOTES.md](ELIXIR_CREATOR_NOTES.md)
+- [ELIXIR_CREATOR_PROFILE.md](ELIXIR_CREATOR_PROFILE.md)
 - [LIBRARY_VERSIONS.md](../spec/LIBRARY_VERSIONS.md)
 
 ### 2. ゲームレビュー担当
@@ -59,7 +59,7 @@
 - [WATERFALL_PLAN.md](../project/WATERFALL_PLAN.md)
 - [STATUS_BOARD.md](../project/STATUS_BOARD.md)
 - [RISK_NOTES.md](../project/RISK_NOTES.md)
-- [TECH_SECRETARY_PROFILE.md](../rules/TECH_SECRETARY_PROFILE.md)
+- [ELIXIR_CREATOR_PROFILE.md](ELIXIR_CREATOR_PROFILE.md)
 - 必要に応じて、変更対象の正本文書も読む
 
 ### 4. Codexレビュー担当
@@ -69,7 +69,7 @@
 - [AGENTS.md](AGENTS.md)
 - [CODEX_RULES.md](../rules/CODEX_RULES.md)
 - [REVIEW_SYSTEM.md](REVIEW_SYSTEM.md)
-- [TECH_SECRETARY_PROFILE.md](../rules/TECH_SECRETARY_PROFILE.md)
+- [ELIXIR_CREATOR_PROFILE.md](ELIXIR_CREATOR_PROFILE.md)
 - 必要に応じて、変更対象の正本文書も読む
 
 ## 主担当エージェントの役割

@@ -13,10 +13,9 @@
 7. [DESIGN_SPEC.md](docs/spec/DESIGN_SPEC.md)
 8. [HARNESS_SPEC.md](docs/spec/HARNESS_SPEC.md)
 9. [ELIXIR_CODING_RULES.md](docs/rules/ELIXIR_CODING_RULES.md)
-10. [ELIXIR_CREATOR_NOTES.md](docs/review/ELIXIR_CREATOR_NOTES.md)
+10. [ELIXIR_CREATOR_PROFILE.md](docs/review/ELIXIR_CREATOR_PROFILE.md)
 11. [GAME_REVIEW_RULES.md](docs/review/GAME_REVIEW_RULES.md)
-12. [TECH_SECRETARY_PROFILE.md](docs/rules/TECH_SECRETARY_PROFILE.md)
-13. [REVIEW_SYSTEM.md](docs/review/REVIEW_SYSTEM.md)
+12. [REVIEW_SYSTEM.md](docs/review/REVIEW_SYSTEM.md)
 
 整理された文書一覧は [docs/README.md](docs/README.md) を参照する。
 
