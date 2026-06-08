@@ -11,6 +11,7 @@
 5. [DESIGN_SPEC.md](DESIGN_SPEC.md)
 6. [HARNESS_SPEC.md](HARNESS_SPEC.md)
 7. [ELIXIR_CODING_RULES.md](ELIXIR_CODING_RULES.md)
+8. [ELIXIR_CREATOR_NOTES.md](ELIXIR_CREATOR_NOTES.md)
 
 各文書の役割:
 
@@ -21,6 +22,7 @@
 - [DESIGN_SPEC.md](DESIGN_SPEC.md): 見た目と演出の仕様
 - [HARNESS_SPEC.md](HARNESS_SPEC.md): 開発・検証コマンドのルール
 - [ELIXIR_CODING_RULES.md](ELIXIR_CODING_RULES.md): Elixir の書き方ルール
+- [ELIXIR_CREATOR_NOTES.md](ELIXIR_CREATOR_NOTES.md): Elixir の作成者と設計思想の整理
 - [LIBRARY_VERSIONS.md](LIBRARY_VERSIONS.md): 採用バージョンの正本
 - [DOCKER_SETUP.md](DOCKER_SETUP.md): Docker 前提の開発環境ルール
 - [ROADMAP.md](ROADMAP.md): 機能を広げる順番
