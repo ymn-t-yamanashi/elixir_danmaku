@@ -23,6 +23,7 @@ Codex は次の順で文書を参照して判断する。
 3. [GAME_SPEC.md](GAME_SPEC.md)
 4. [DESIGN_SPEC.md](DESIGN_SPEC.md)
 5. [HARNESS_SPEC.md](HARNESS_SPEC.md)
+6. [ELIXIR_CODING_RULES.md](ELIXIR_CODING_RULES.md)
 
 仕様が衝突した場合は、実装前に確認を取る。
 
@@ -61,6 +62,7 @@ Codex は次の順で文書を参照して判断する。
 - Babylon.js API 呼び出しをアプリ全体に散らさない
 - 重要ロジックを曖昧な `utils` に集めない
 - 命名は省略しすぎない
+- Elixir コードは [ELIXIR_CODING_RULES.md](ELIXIR_CODING_RULES.md) に従う
 
 ## Codexが編集時に守るルール
 
