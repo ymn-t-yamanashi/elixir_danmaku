@@ -59,6 +59,7 @@
 - [WATERFALL_PLAN.md](../project/WATERFALL_PLAN.md)
 - [STATUS_BOARD.md](../project/STATUS_BOARD.md)
 - [RISK_NOTES.md](../project/RISK_NOTES.md)
+- [DOC_REVIEW_PROFILE.md](DOC_REVIEW_PROFILE.md)
 - [ELIXIR_CREATOR_PROFILE.md](ELIXIR_CREATOR_PROFILE.md)
 - 必要に応じて、変更対象の正本文書も読む
 
