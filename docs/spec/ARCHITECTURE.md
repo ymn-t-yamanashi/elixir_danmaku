@@ -54,7 +54,7 @@ mix phx.new danmaku --app danmaku --module Danmaku --no-ecto
 ## 開発環境方針
 
 - 開発環境の正本は Docker とする
-- Windows では `Docker Desktop + WSL2 backend` を許容する
+- Windows では `Docker Desktop` を前提にする
 - macOS / Linux でも同じ Docker 構成で動かせる形を目指す
 - `mix`, `node`, `npm`, `phoenix` の実行環境はホストではなくコンテナ側に寄せる
 - ブラウザ表示はホスト側で行い、アプリ本体はコンテナ内で動かす
