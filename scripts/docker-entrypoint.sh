@@ -5,6 +5,13 @@ for dir in /app/danmaku/deps /app/danmaku/_build /app/danmaku/assets/node_module
   mkdir -p "$dir"
 done
 
-chown -R app:app /app/danmaku/deps /app/danmaku/_build /app/danmaku/assets/node_modules
+for dir in /app/danmaku/deps /app/danmaku/_build /app/danmaku/assets/node_modules; do
+  marker="$dir/.owner-initialized"
+  if [ ! -f "$marker" ]; then
+    chown -R app:app "$dir"
+    touch "$marker"
+    chown app:app "$marker"
+  fi
+done
 
 exec gosu app "$@"
