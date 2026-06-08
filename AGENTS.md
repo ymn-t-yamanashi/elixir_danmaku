@@ -14,6 +14,7 @@
 8. [ELIXIR_CREATOR_NOTES.md](ELIXIR_CREATOR_NOTES.md)
 9. [GAME_REVIEW_RULES.md](GAME_REVIEW_RULES.md)
 10. [TECH_SECRETARY_PROFILE.md](TECH_SECRETARY_PROFILE.md)
+11. [REVIEW_SYSTEM.md](REVIEW_SYSTEM.md)
 
 各文書の役割:
 
@@ -27,6 +28,7 @@
 - [ELIXIR_CREATOR_NOTES.md](ELIXIR_CREATOR_NOTES.md): Elixir の作成者と設計思想の整理
 - [GAME_REVIEW_RULES.md](GAME_REVIEW_RULES.md): ゲーム体験レビューの観点
 - [TECH_SECRETARY_PROFILE.md](TECH_SECRETARY_PROFILE.md): 技術が分かる右腕の人物像
+- [REVIEW_SYSTEM.md](REVIEW_SYSTEM.md): レビュー体制とサブエージェント運用の正本
 - [LIBRARY_VERSIONS.md](LIBRARY_VERSIONS.md): 採用バージョンの正本
 - [DOCKER_SETUP.md](DOCKER_SETUP.md): Docker 前提の開発環境ルール
 - [ROADMAP.md](ROADMAP.md): 機能を広げる順番
@@ -47,6 +49,7 @@
 - 文書を更新したときは、他の文書との整合性と重複を確認すること
 - 現在地は `STATUS_BOARD.md` を唯一の正本として扱うこと
 - 変更は小さく責務を絞ること
+- ユーザーが `レビューして` と依頼した場合は、`REVIEW_SYSTEM.md` に従ってレビューすること
 
 検証ルール:
 

@@ -25,6 +25,7 @@ Codex は次の順で文書を参照して判断する。
 5. [HARNESS_SPEC.md](HARNESS_SPEC.md)
 6. [ELIXIR_CODING_RULES.md](ELIXIR_CODING_RULES.md)
 7. [GAME_REVIEW_RULES.md](GAME_REVIEW_RULES.md)
+8. [REVIEW_SYSTEM.md](REVIEW_SYSTEM.md)
 
 仕様が衝突した場合は、実装前に確認を取る。
 
@@ -72,6 +73,8 @@ Codex は次の順で文書を参照して判断する。
 - 1回の変更で目的を増やしすぎない
 - 必要がない限り新しい抽象化を増やさない
 - 仕様変更を伴う場合は仕様書も更新する
+- レビュー運用は [REVIEW_SYSTEM.md](REVIEW_SYSTEM.md) に従う
+- ユーザーが `レビューして` と依頼した場合は、原則として [REVIEW_SYSTEM.md](REVIEW_SYSTEM.md) に従ってレビューする
 
 ## Codexが避けること
 
