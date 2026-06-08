@@ -1,0 +1,7 @@
+.env
+_build/
+deps/
+node_modules/
+coverage/
+tmp/
+*.ez
