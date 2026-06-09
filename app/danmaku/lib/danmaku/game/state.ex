@@ -8,5 +8,6 @@ defmodule Danmaku.Game.State do
             height: 640.0,
             player: Entity.player(),
             enemy: Entity.enemy(),
-            bullets: []
+            bullets: [],
+            hits: 0
 end

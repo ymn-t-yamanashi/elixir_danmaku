@@ -1,30 +1,35 @@
 defmodule Danmaku.Game do
   @moduledoc """
-  最小のゲーム状態を更新するロジックをまとめる。
+  ゲーム状態の更新ロジックをまとめる。
   """
 
   alias Danmaku.Game.Entity
   alias Danmaku.Game.State
 
   @bullet_interval 30
-  @bullet_speed 8.0
+  @bullet_speed 12.0
 
+  @doc "初期のゲーム状態を作る。"
   def new do
     %State{}
   end
 
+  @doc "1 フレーム分の状態更新を進める。"
   def step(%State{} = state, input \\ %{}) do
     state
     |> move_player(input)
     |> maybe_spawn_enemy_bullet()
     |> advance_bullets()
+    |> resolve_player_hits()
     |> increment_tick()
   end
 
+  @doc "自機移動だけを先に反映する。"
   def move(%State{} = state, input \\ %{}) do
     move_player(state, input)
   end
 
+  @doc "画面描画に必要な値だけを取り出す。"
   def snapshot(%State{} = state) do
     %{
       tick: state.tick,
@@ -32,7 +37,8 @@ defmodule Danmaku.Game do
       height: state.height,
       player: state.player,
       enemy: state.enemy,
-      bullets: state.bullets
+      bullets: state.bullets,
+      hits: state.hits
     }
   end
 
@@ -66,6 +72,13 @@ defmodule Danmaku.Game do
     %{state | bullets: bullets}
   end
 
+  defp resolve_player_hits(%State{} = state) do
+    {hit_bullets, remaining_bullets} =
+      Enum.split_with(state.bullets, &bullet_hits_player?(state.player, &1))
+
+    %{state | bullets: remaining_bullets, hits: state.hits + length(hit_bullets)}
+  end
+
   defp increment_tick(%State{} = state) do
     %{state | tick: state.tick + 1}
   end
@@ -79,4 +92,12 @@ defmodule Danmaku.Game do
   defp normalize(_value), do: 0.0
 
   defp bounds(%State{} = state), do: %{width: state.width, height: state.height}
+
+  defp bullet_hits_player?(player, bullet) do
+    dx = player.x - bullet.x
+    dy = player.y - bullet.y
+    radius = player.radius + bullet.radius
+
+    dx * dx + dy * dy <= radius * radius
+  end
 end

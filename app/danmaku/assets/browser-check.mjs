@@ -38,6 +38,7 @@ try {
   const initialPlayerX = Number(
     await page.locator('[data-testid="player-position"]').getAttribute("data-player-x"),
   );
+  const initialHits = Number(await page.locator('[data-testid="hit-count"]').textContent());
 
   await page.waitForFunction(
     previousTick => {
@@ -60,6 +61,15 @@ try {
     { timeout: 15_000 },
   );
 
+  await page.waitForFunction(
+    previousHits => {
+      const element = document.querySelector('[data-testid="hit-count"]');
+      return element && Number(element.textContent) > previousHits;
+    },
+    initialHits,
+    { timeout: 25_000 },
+  );
+
   await page.keyboard.press("ArrowLeft");
 
   await page.waitForFunction(
@@ -80,6 +90,7 @@ try {
   const finalPlayerX = Number(
     await page.locator('[data-testid="player-position"]').getAttribute("data-player-x"),
   );
+  const finalHits = Number(await page.locator('[data-testid="hit-count"]').textContent());
 
   if (!Number.isFinite(finalTick) || finalTick <= initialTick) {
     throw new Error(`tick did not advance: initial=${initialTick}, final=${finalTick}`);
@@ -87,6 +98,10 @@ try {
 
   if (!Number.isFinite(finalPlayerX) || finalPlayerX >= initialPlayerX) {
     throw new Error(`player did not move left: initial=${initialPlayerX}, final=${finalPlayerX}`);
+  }
+
+  if (!Number.isFinite(finalHits) || finalHits <= initialHits) {
+    throw new Error(`hit counter did not advance: initial=${initialHits}, final=${finalHits}`);
   }
 
   console.log("browser check passed");

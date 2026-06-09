@@ -47,7 +47,7 @@ Docker 内での実行を前提に、再現性のある手順だけを扱う。
 ### `mix browser.check`
 
 - 実ブラウザで最小の画面確認を行う
-- Chromium を使ってホーム画面を開き、Tick が進むこと、自機が移動できること、敵弾が表示されることを確認する
+- Chromium を使ってホーム画面を開き、Tick が進むこと、自機が移動できること、敵弾が表示されること、ヒット数が増えることを確認する
 - 実行ごとにスクリーンショットを `app/danmaku/.browser-check.png` に保存する
 - 実行は `MIX_ENV=dev mix browser.check` とする
 

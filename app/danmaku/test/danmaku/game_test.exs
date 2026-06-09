@@ -14,9 +14,10 @@ defmodule Danmaku.GameTest do
       assert state.player.kind == :player
       assert state.enemy.kind == :enemy
       assert state.bullets == []
+      assert state.hits == 0
     end
 
-    test "プレイヤーと敵の初期エンティティを直接生成できる" do
+    test "プレイヤーと敵の初期エンティティを取得できる" do
       assert Entity.player().kind == :player
       assert Entity.enemy().kind == :enemy
     end
@@ -34,7 +35,7 @@ defmodule Danmaku.GameTest do
       assert next_state.tick == 1
     end
 
-    test "画面外に出る方向の入力でも端で止まる" do
+    test "画面外に出る入力でも自機は枠内で止まる" do
       state = Game.new()
       state = %{state | player: %{state.player | x: 319.0, y: 10.0}}
 
@@ -44,7 +45,7 @@ defmodule Danmaku.GameTest do
       assert next_state.player.y == 8.0
     end
 
-    test "平坦なx y形式の入力も受け取れる" do
+    test "x y 形式の入力でも移動できる" do
       state = Game.new()
 
       next_state = Game.step(state, %{x: 0, y: 0})
@@ -53,7 +54,7 @@ defmodule Danmaku.GameTest do
       assert next_state.player.y == state.player.y
     end
 
-    test "一定間隔で敵弾を1つ生成する" do
+    test "一定間隔で敵弾を 1 つ生成する" do
       state = %{Game.new() | tick: 29}
 
       next_state = Game.step(state, %{})
@@ -65,7 +66,7 @@ defmodule Danmaku.GameTest do
       assert bullet.y > next_state.enemy.y
     end
 
-    test "弾は下方向へ進む" do
+    test "弾は次のフレームへ進む" do
       bullet = Entity.bullet(:bullet_1, 100.0, 100.0, 8.0)
       state = %{Game.new() | bullets: [bullet]}
 
@@ -74,10 +75,21 @@ defmodule Danmaku.GameTest do
       [moved_bullet] = next_state.bullets
       assert moved_bullet.y == 108.0
     end
+
+    test "敵弾が自機に重なったら消えてヒット数が増える" do
+      bullet = Entity.bullet(:bullet_1, 160.0, 532.0, 0.0)
+      state = %{Game.new() | bullets: [bullet]}
+
+      next_state = Game.step(state, %{})
+
+      assert next_state.bullets == []
+      assert next_state.hits == 1
+      assert next_state.tick == 1
+    end
   end
 
   describe "snapshot/1" do
-    test "画面描画用の情報を取り出せる" do
+    test "画面描画用の情報を返す" do
       snapshot = Game.snapshot(Game.new())
 
       assert snapshot.tick == 0
@@ -86,6 +98,7 @@ defmodule Danmaku.GameTest do
       assert snapshot.player.kind == :player
       assert snapshot.enemy.kind == :enemy
       assert snapshot.bullets == []
+      assert snapshot.hits == 0
     end
   end
 end

@@ -19,6 +19,7 @@ defmodule DanmakuWeb.HomeLive do
     "D" => %{move: %{x: 1.0, y: 0.0}}
   }
 
+  @doc "初期状態を受け取って LiveView を立ち上げる。"
   @impl true
   def mount(_params, _session, socket) do
     state = Game.new()
@@ -36,6 +37,7 @@ defmodule DanmakuWeb.HomeLive do
     {:ok, socket}
   end
 
+  @doc "キー入力を自機移動へ変換する。"
   @impl true
   def handle_event("move", %{"key" => key}, socket) do
     input = key_to_input(key)
@@ -54,6 +56,7 @@ defmodule DanmakuWeb.HomeLive do
     end
   end
 
+  @doc "定期タイマーで 1 フレーム分の更新を進める。"
   @impl true
   def handle_info(:tick, socket) do
     state = Game.step(socket.assigns.state, %{})

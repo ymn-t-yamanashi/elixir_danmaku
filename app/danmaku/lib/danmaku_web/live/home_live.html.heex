@@ -125,6 +125,12 @@
               </dd>
             </div>
             <div class="flex items-center justify-between gap-4">
+              <dt class="text-slate-400">Hits</dt>
+              <dd class="font-semibold text-slate-100" data-testid="hit-count">
+                {@game.hits}
+              </dd>
+            </div>
+            <div class="flex items-center justify-between gap-4">
               <dt class="text-slate-400">Scene size</dt>
               <dd class="font-semibold text-slate-100">
                 {@game.width |> trunc()} x {@game.height |> trunc()}
